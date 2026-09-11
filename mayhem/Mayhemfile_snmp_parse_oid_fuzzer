@@ -1,0 +1,9 @@
+project: savantenvs/net-snmp
+target: snmp_parse_oid_fuzzer
+cmds:
+  - cmd: /mayhem/snmp_parse_oid_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/snmp_oid.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snmp_parse_oid_fuzzer/testsuite

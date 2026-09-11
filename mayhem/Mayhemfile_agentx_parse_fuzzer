@@ -1,0 +1,9 @@
+project: savantenvs/net-snmp
+target: agentx_parse_fuzzer
+cmds:
+  - cmd: /mayhem/agentx_parse_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/agentx.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/agentx_parse_fuzzer/testsuite

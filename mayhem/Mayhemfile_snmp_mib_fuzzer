@@ -1,0 +1,9 @@
+project: savantenvs/net-snmp
+target: snmp_mib_fuzzer
+cmds:
+  - cmd: /mayhem/snmp_mib_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/snmp_mib.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snmp_mib_fuzzer/testsuite
