@@ -1,0 +1,8 @@
+project: savantenvs/net-snmp
+target: snmp_agent_e2e_fuzzer-mined-7e27589
+cmds:
+  - cmd: /mayhem/snmp_agent_e2e_fuzzer
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snmp_agent_e2e_fuzzer-mined-7e27589/testsuite
