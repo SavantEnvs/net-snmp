@@ -1,0 +1,8 @@
+project: savantenvs/net-snmp
+target: snmp_sec_models_fuzzer-mined-d01499c
+cmds:
+  - cmd: /mayhem/snmp_sec_models_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/snmp_ber.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
